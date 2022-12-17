@@ -24,13 +24,12 @@ class TasksController < ApplicationController
   def update
     @task.update(task_params)
 
-    redirect_to tasks_path(@task)
+    redirect_to tasks_path
   end
 
   def destroy
     @task.destroy
-
-    redirect_to tasks_path, status: :see_other
+    redirect_to tasks_path
 
   end
 
